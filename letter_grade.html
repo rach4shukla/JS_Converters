@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Show letter grade</title>
+	<script>
+		while (true) {
+            let value = prompt("Enter number grade from 0 through 100" + "\nenter 999 to end entries)");
+
+            if (value === "999") {
+                alert("Thank you for using the Grade Converter. Exiting the application.");
+                break;
+            }
+
+            if (isNaN(value) || value < 0 || value > 100) {
+                continue;
+            }
+
+            let valueGrade;
+
+            if (value >= 88 && value <= 100) {
+                valueGrade = "A";
+            } else if (value >= 80 && value <= 87) {
+                valueGrade = "B";
+            } else if (value >= 68 && value <= 79) {
+                valueGrade = "C";
+            } else if (value >= 60 && value <= 67) {
+                valueGrade = "D";
+            } else {
+                valueGrade = "F";
+            }
+
+            alert("Number grade = " + value + "\nLetter grade = " + valueGrade);
+        }
+	</script>
+</head>
+<body>
+	<main>
+    	<h1>This page is displayed after the JavaScript is executed</h1>
+	</main>
+</body>
+</html>
